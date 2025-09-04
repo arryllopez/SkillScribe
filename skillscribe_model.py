@@ -13,7 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
 model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER",) 
 
-nlp = pipeline("ner", model=model, tokenizer=tokenizer,)
+nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple",)
 example = "My name is Wolfgang and I live in Berlin"
 
 ner_results = nlp(example)
