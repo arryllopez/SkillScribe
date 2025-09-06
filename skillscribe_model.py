@@ -13,8 +13,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
 model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER",) 
 
-nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple",)
-example = "My name is Wolfgang and I live in Berlin"
-
-ner_results = nlp(example)
+ner = pipeline("ner", model="dslim/bert-base-NER", aggregation_strategy="simple",)
+text = "We are looking for someone with Python, SQL, and React skills."
+ner_results = ner(text)
+#Each keyword in the listing above (python, sql and react) are all tagged as miscellaneous since they dont fit into the pre trained labels of person, location, or organization
 print(ner_results)
+
+
+#Need to prepare a custom dataset of job listings that the model can train on
