@@ -1,6 +1,6 @@
-# 🚀 BuzzMatch (Resume Keyword Extractor)
+# 🚀 SkillScribe (Resume Keyword Extractor)
 
-BuzzMatch is an AI-powered tool that fine-tunes open-source LLMs to extract and generate **resume buzzwords** from job descriptions.  
+SkillScribe is an AI-powered tool that fine-tunes open-source LLMs to extract and generate **resume buzzwords** from job descriptions.  
 It helps job seekers align their resumes with recruiter expectations by surfacing **key skills, technologies, and keywords**.  
 
 ---
